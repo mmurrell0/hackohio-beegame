@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddf2j3kt3hlqa"]
+[gd_scene load_steps=5 format=3 uid="uid://ddf2j3kt3hlqa"]
 
 [ext_resource type="PackedScene" uid="uid://1ek4p4ii3rhm" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://cn058aabff1ap" path="res://Scripts/game.gd" id="1_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://63ky38f8syno" path="res://Scenes/hornet.tscn" id="2_qxrlw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebmjs"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_wrm1d")
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 position = Vector2(51, 54)
@@ -22,3 +25,8 @@ scale = Vector2(1, 39.200005)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
 shape = SubResource("RectangleShape2D_ebmjs")
+
+[node name="Hornet" parent="." instance=ExtResource("2_qxrlw")]
+position = Vector2(975, 106)
+
+[connection signal="game_over" from="Player" to="." method="_on_game_over"]

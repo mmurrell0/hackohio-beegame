@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal game_over
+
 @export var bullet : PackedScene
 var bullet_speed = 100.0
 
@@ -14,6 +16,9 @@ func _physics_process(delta):
 
 func _process(delta: float) -> void:
 	shoot()
+	
+	if(Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT)):
+		$HealthComponent.take_damage(50)
 
 func shoot():
 	var isShooting = Input.is_action_just_released("Shoot")
@@ -26,3 +31,7 @@ func shoot():
 func get_movement_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	velocity = input_direction * SPEED
+
+
+func _on_game_over() -> void:
+	game_over.emit()

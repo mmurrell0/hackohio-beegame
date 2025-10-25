@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dojcx51cj4lco"
-path="res://.godot/imported/HornetWingsClosed.png-67c0efd067fd9141ec5a52980e83cfa0.ctex"
+uid="uid://bvw0cke18mh8h"
+path="res://.godot/imported/BeeBroDamaged.png-19db248e002499f56c5b318f77e6f3a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Heathens/Hornet/HornetWingsClosed.png"
-dest_files=["res://.godot/imported/HornetWingsClosed.png-67c0efd067fd9141ec5a52980e83cfa0.ctex"]
+source_file="res://Art/BeeBroSprites/BeeBroDamaged.png"
+dest_files=["res://.godot/imported/BeeBroDamaged.png-19db248e002499f56c5b318f77e6f3a7.ctex"]
 
 [params]
 

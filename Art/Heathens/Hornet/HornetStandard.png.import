@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ceewrcl4he0j2"
-path="res://.godot/imported/HornetStandard.png-62e2a1cdab88d56e0482583ef8d20119.ctex"
+path="res://.godot/imported/HornetStandard.png-5cb638c4128200844c5c4145e380b281.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Heathens/HornetStandard.png"
-dest_files=["res://.godot/imported/HornetStandard.png-62e2a1cdab88d56e0482583ef8d20119.ctex"]
+source_file="res://Art/Heathens/Hornet/HornetStandard.png"
+dest_files=["res://.godot/imported/HornetStandard.png-5cb638c4128200844c5c4145e380b281.ctex"]
 
 [params]
 

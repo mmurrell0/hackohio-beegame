@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://ddf2j3kt3hlqa"]
+[gd_scene load_steps=3 format=3 uid="uid://ddf2j3kt3hlqa"]
+
+[ext_resource type="PackedScene" uid="uid://1ek4p4ii3rhm" path="res://Scenes/player.tscn" id="1_ebmjs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebmjs"]
 
 [node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ebmjs")]
+position = Vector2(51, 54)
+
+[node name="LeftBoundary" type="Area2D" parent="." groups=["Boundary"]]
+position = Vector2(-45, 311)
+scale = Vector2(1, 39.200005)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBoundary"]
+shape = SubResource("RectangleShape2D_ebmjs")
+
+[node name="RightBoundary" type="Area2D" parent="." groups=["Boundary"]]
+position = Vector2(1208, 311)
+scale = Vector2(1, 39.200005)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
+shape = SubResource("RectangleShape2D_ebmjs")

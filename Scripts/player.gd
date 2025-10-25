@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
-var bullet = preload("res://Scenes/bullet.tscn")
+@export var bullet : PackedScene
 var bullet_speed = 100.0
 
 const SPEED = 300.0
+
+func _ready() -> void:
+	$Wings.play("flapping")
 
 func _physics_process(delta):
 	get_movement_input()
@@ -14,10 +17,11 @@ func _process(delta: float) -> void:
 
 func shoot():
 	var isShooting = Input.is_action_just_released("Shoot")
-	if(isShooting):
+	if(isShooting && $AttackCooldown.is_stopped()):
 		var bullet_instance = bullet.instantiate()
-		add_child(bullet_instance)
+		owner.add_child(bullet_instance)
 		bullet_instance.transform = $FirePoint.global_transform
+		$AttackCooldown.start()
 
 func get_movement_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")

@@ -1,3 +1,14 @@
+# Machine Specific
+.DS_Store
+.AppleDouble
+.LSOverride
+UserInterfaceState.xcuserstate
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+.venv/
+
 # Godot 4+ specific ignores
 .godot/
 .nomedia
@@ -6,6 +17,7 @@
 .import/
 export.cfg
 export_credentials.cfg
+*.tmp
 
 # Imported translations (automatically generated from CSV files)
 *.translation

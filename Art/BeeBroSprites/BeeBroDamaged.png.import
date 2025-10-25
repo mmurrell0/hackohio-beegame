@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yjqjir5qhyv7"
-path="res://.godot/imported/WingsOpenD.png-066db33fabb2cdf348db051f847fe880.ctex"
+uid="uid://ct71iplcbtcyc"
+path="res://.godot/imported/BeeBroDamaged.png-19db248e002499f56c5b318f77e6f3a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/BeeBroSprites/WingsOpenD.png"
-dest_files=["res://.godot/imported/WingsOpenD.png-066db33fabb2cdf348db051f847fe880.ctex"]
+source_file="res://Art/BeeBroSprites/BeeBroDamaged.png"
+dest_files=["res://.godot/imported/BeeBroDamaged.png-19db248e002499f56c5b318f77e6f3a7.ctex"]
 
 [params]
 

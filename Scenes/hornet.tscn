@@ -24,10 +24,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m26km"]
-size = Vector2(34, 34)
+size = Vector2(34.333336, 40.666668)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhev1"]
-size = Vector2(22, 34)
+size = Vector2(31.666668, 41.666668)
 
 [node name="Hornet" type="CharacterBody2D" groups=["Enemy"]]
 scale = Vector2(1.5, 1.5)

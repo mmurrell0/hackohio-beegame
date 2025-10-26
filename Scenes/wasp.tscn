@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://bwai800yq164c"]
+
+[ext_resource type="Script" uid="uid://cor8284pb0y5" path="res://Scripts/wasp.gd" id="1_bntxp"]
+[ext_resource type="Texture2D" uid="uid://dsk2p1uveycsf" path="res://Art/Heathens/Wasp/WaspStandard1.png" id="1_i8uob"]
+[ext_resource type="PackedScene" uid="uid://clmgjmfg0it8u" path="res://Scenes/wasp_bullet.tscn" id="2_auvi2"]
+[ext_resource type="Texture2D" uid="uid://bxe0kp0vi8y2q" path="res://Art/Heathens/Wasp/WaspStandard2.png" id="2_bntxp"]
+[ext_resource type="Resource" uid="uid://dj3fwhm3sx2n5" path="res://Resources/waspstats.tres" id="2_n8uva"]
+[ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="3_n8uva"]
+[ext_resource type="Resource" uid="uid://co38cs5dihiby" path="res://Resources/hornetstats.tres" id="4_auvi2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mn4r7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i8uob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bntxp")
+}],
+"loop": true,
+"name": &"flapping",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m26km"]
+size = Vector2(34.333336, 40.666668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhev1"]
+size = Vector2(31.666668, 41.666668)
+
+[node name="Wasp" type="CharacterBody2D" groups=["Enemy"]]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_bntxp")
+bullet = ExtResource("2_auvi2")
+stats = ExtResource("2_n8uva")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mn4r7")
+animation = &"flapping"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.16666698, 5.666666)
+shape = SubResource("RectangleShape2D_m26km")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0.49999937, 4.833333)
+shape = SubResource("RectangleShape2D_uhev1")
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_n8uva")]
+stats = ExtResource("4_auvi2")
+
+[node name="AttackCooldown" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="FirePoint" type="Node2D" parent="."]
+position = Vector2(-33.333336, 16)
+
+[connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]
+[connection signal="died" from="HealthComponent" to="." method="_on_died"]

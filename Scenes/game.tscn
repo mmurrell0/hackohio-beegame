@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddf2j3kt3hlqa"]
+[gd_scene load_steps=11 format=3 uid="uid://ddf2j3kt3hlqa"]
 
 [ext_resource type="PackedScene" uid="uid://1ek4p4ii3rhm" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://cn058aabff1ap" path="res://Scripts/game.gd" id="1_wrm1d"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://humh7skip8ir" path="res://Scenes/fly.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://dttg2yla8guux" path="res://Scenes/pause_menu.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://rj6afcysnb8r" path="res://Scenes/death_menu.tscn" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://bwai800yq164c" path="res://Scenes/wasp.tscn" id="9_h4fw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebmjs"]
 
@@ -55,5 +56,8 @@ visible = false
 
 [node name="DeathMenu" parent="." instance=ExtResource("7_1l0tm")]
 visible = false
+
+[node name="Wasp" parent="." instance=ExtResource("9_h4fw4")]
+position = Vector2(1077, 316)
 
 [connection signal="game_over" from="Player" to="." method="_on_game_over"]

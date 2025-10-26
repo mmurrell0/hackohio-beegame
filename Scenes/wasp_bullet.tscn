@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://clmgjmfg0it8u"]
+
+[ext_resource type="Script" uid="uid://d2c64plh67o57" path="res://wasp_bullet.gd" id="1_6f7a6"]
+[ext_resource type="Resource" uid="uid://dj3fwhm3sx2n5" path="res://Resources/waspstats.tres" id="2_18lj8"]
+[ext_resource type="Texture2D" uid="uid://cy60jxof6u6jx" path="res://Art/Heathens/Hornet/HornetStinger.png" id="2_ncfjw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yawu"]
+size = Vector2(4, 4)
+
+[node name="WaspBullet" type="Area2D"]
+script = ExtResource("1_6f7a6")
+stats = ExtResource("2_18lj8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ncfjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7yawu")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

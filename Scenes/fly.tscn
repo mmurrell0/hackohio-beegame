@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://humh7skip8ir"]
+[gd_scene load_steps=10 format=3 uid="uid://humh7skip8ir"]
 
 [ext_resource type="Script" uid="uid://bshvxn0jtlgqf" path="res://Scripts/fly.gd" id="1_p3uj0"]
 [ext_resource type="Resource" uid="uid://b6ql6owxp00ev" path="res://Resources/flystats.tres" id="2_fojns"]
 [ext_resource type="Texture2D" uid="uid://c8wa1abgdpt1d" path="res://Art/Heathens/Fly/FlyStandard1.png" id="3_pmu3r"]
 [ext_resource type="Texture2D" uid="uid://c2l0y6jjwyqkq" path="res://Art/Heathens/Fly/FlyStandard2.png" id="4_w0sxp"]
 [ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="5_01udg"]
+[ext_resource type="AudioStream" uid="uid://ciyk1va0o2gqw" path="res://Art/SoundEffects/Mosquito.mp3" id="6_fojns"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjwsl"]
 animations = [{
@@ -51,6 +52,12 @@ shape = SubResource("RectangleShape2D_p3uj0")
 [node name="FlashDuration" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="Traveling" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_fojns")
+pitch_scale = 0.48
+max_distance = 750.0
+parameters/looping = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]

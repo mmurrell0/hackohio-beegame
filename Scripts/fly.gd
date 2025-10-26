@@ -7,6 +7,7 @@ extends Area2D
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("flapping")
+	$Traveling.play(0.4)
 
 func _physics_process(delta: float) -> void:
 	position -= transform.x * speed * delta
@@ -26,4 +27,5 @@ func _on_damaged() -> void:
 	modulate.a = 1
 
 func _on_died() -> void:
+	owner.find_child("Death").play(0.55)
 	queue_free()

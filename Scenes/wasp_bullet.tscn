@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://clmgjmfg0it8u"]
 
-[ext_resource type="Script" uid="uid://d2c64plh67o57" path="res://wasp_bullet.gd" id="1_6f7a6"]
+[ext_resource type="Script" uid="uid://d2c64plh67o57" path="res://Scripts/wasp_bullet.gd" id="1_6f7a6"]
 [ext_resource type="Resource" uid="uid://dj3fwhm3sx2n5" path="res://Resources/waspstats.tres" id="2_18lj8"]
 [ext_resource type="Texture2D" uid="uid://cy60jxof6u6jx" path="res://Art/Heathens/Hornet/HornetStinger.png" id="2_ncfjw"]
 

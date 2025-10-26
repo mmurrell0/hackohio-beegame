@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjvxvgjltqy4o"]
+[gd_scene load_steps=13 format=3 uid="uid://cjvxvgjltqy4o"]
 
 [ext_resource type="Texture2D" uid="uid://ceewrcl4he0j2" path="res://Art/Heathens/Hornet/HornetStandard.png" id="1_i7dss"]
 [ext_resource type="Texture2D" uid="uid://dojcx51cj4lco" path="res://Art/Heathens/Hornet/HornetWingsClosed.png" id="1_m26km"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="5_s5g3n"]
 [ext_resource type="Resource" uid="uid://co38cs5dihiby" path="res://Resources/hornetstats.tres" id="7_40bbm"]
 [ext_resource type="Script" uid="uid://ctnca6touhcls" path="res://Scripts/targeting_fire_point.gd" id="7_d5q07"]
+[ext_resource type="AudioStream" uid="uid://cbebaiw6tcxy1" path="res://Art/SoundEffects/EnemyShooting.mp3" id="9_qblt3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ee0bo"]
 animations = [{
@@ -67,6 +68,9 @@ autostart = true
 [node name="FlashDuration" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_qblt3")
 
 [connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]
 [connection signal="died" from="HealthComponent" to="." method="_on_died"]

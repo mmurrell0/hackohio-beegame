@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://1ek4p4ii3rhm"]
+[gd_scene load_steps=15 format=3 uid="uid://1ek4p4ii3rhm"]
 
 [ext_resource type="Script" uid="uid://bhbncv0cdtbe3" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="PackedScene" uid="uid://cgdgnsltbfo7w" path="res://Scenes/bullet.tscn" id="2_6t5aa"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bvw0cke18mh8h" path="res://Art/BeeBroSprites/BeeBroDamaged.png" id="6_3smsa"]
 [ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="6_x3wgy"]
 [ext_resource type="Resource" uid="uid://co38cs5dihiby" path="res://Resources/hornetstats.tres" id="8_8erm5"]
+[ext_resource type="AudioStream" uid="uid://cpdihv54in5og" path="res://Art/SoundEffects/BeeBlaster.mp3" id="9_f1ek2"]
+[ext_resource type="AudioStream" uid="uid://cdc1pjajcl08p" path="res://Art/SoundEffects/BeeBroHurt.mp3" id="10_tx1dd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{
@@ -80,6 +82,12 @@ one_shot = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2(-2, 4)
 shape = SubResource("RectangleShape2D_3smsa")
+
+[node name="BeeBlasterSoundFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_f1ek2")
+
+[node name="BeeBroHurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_tx1dd")
 
 [connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]
 [connection signal="died" from="HealthComponent" to="." method="_on_died"]

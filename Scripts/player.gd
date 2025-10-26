@@ -27,6 +27,7 @@ func shoot():
 		owner.add_child(bullet_instance)
 		bullet_instance.transform = $FirePoint.global_transform
 		$AttackCooldown.start()
+		$BeeBlasterSoundFX.play(0.5)
 
 func get_movement_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
@@ -41,6 +42,7 @@ func _on_damaged() -> void:
 	# Normal
 	$Body.frame = 0
 	modulate.a = 1
+	$BeeBroHurt.play(0.8)
 
 func _on_died() -> void:
 	game_over.emit()

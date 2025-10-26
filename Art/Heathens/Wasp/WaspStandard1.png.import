@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvv8o7lttpqj"
-path="res://.godot/imported/FlyStandard2.png-b5f1041ec5c3131ff7e1799daf146d8a.ctex"
+uid="uid://dsk2p1uveycsf"
+path="res://.godot/imported/WaspStandard1.png-3b2f6cf8cdd0bc1a3527975088cdd1e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Heathens/Fly/FlyStandard2.png"
-dest_files=["res://.godot/imported/FlyStandard2.png-b5f1041ec5c3131ff7e1799daf146d8a.ctex"]
+source_file="res://Art/Heathens/Wasp/WaspStandard1.png"
+dest_files=["res://.godot/imported/WaspStandard1.png-3b2f6cf8cdd0bc1a3527975088cdd1e4.ctex"]
 
 [params]
 

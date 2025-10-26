@@ -32,6 +32,13 @@ func get_movement_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	velocity = input_direction * SPEED
 
+func _on_damaged() -> void:
+	# Damaged
+	$Body.frame = 1
+	$DamagedFrameTimer.start()
+	await $DamagedFrameTimer.timeout
+	# Normal
+	$Body.frame = 0
 
-func _on_game_over() -> void:
+func _on_died() -> void:
 	game_over.emit()

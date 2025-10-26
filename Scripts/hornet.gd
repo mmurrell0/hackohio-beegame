@@ -1,14 +1,24 @@
 extends CharacterBody2D
 
+@export var bullet : PackedScene
 
-# ADD HEALTH AND BE ABLE TO TAKE DAMAGE AND DIE
-# MAYBE ADD FUNCTION FOR POWER UP DROPS
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$Wings.play("flapping")
+# MAYBE ADD FUNCTION FOR POWER UP DROPS
+# Projectile shoots straight at player then stays on that course'
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	shoot()
+
+func shoot():
+	if($AttackCooldown.is_stopped()):
+		var bullet_instance = bullet.instantiate()
+		owner.add_child(bullet_instance)
+		bullet_instance.transform = $FirePoint.global_transform
+		$AttackCooldown.start()
+
+func _on_died() -> void:
+	queue_free()
+
+func _on_damaged() -> void:
+	pass # Replace with function body.

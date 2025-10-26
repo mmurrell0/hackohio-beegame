@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var bullet : PackedScene
+@export var stats: Resource
 
 func _ready() -> void:
 	$Wings.play("flapping")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2ic47piemd8r"]
+[gd_scene load_steps=9 format=3 uid="uid://d2ic47piemd8r"]
 
 [ext_resource type="Script" uid="uid://daf14wrufaia1" path="res://Scripts/mosquito.gd" id="1_g0w4w"]
 [ext_resource type="Texture2D" uid="uid://bynbldcuuohql" path="res://Art/Heathens/Mosquito/MosquitoBase.png" id="1_vq3yg"]
+[ext_resource type="Resource" uid="uid://dkonyo13qkh4k" path="res://Resources/mosquito.tres" id="2_cnri3"]
 [ext_resource type="Texture2D" uid="uid://xbdhwdchktff" path="res://Art/Heathens/Mosquito/MosquitoBase2.png" id="2_g0w4w"]
 [ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="4_s0tjq"]
 
@@ -27,11 +28,12 @@ size = Vector2(57, 3)
 
 [node name="Mosquito" type="Area2D" groups=["Enemy"]]
 script = ExtResource("1_g0w4w")
+stats = ExtResource("2_cnri3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s0tjq")
 animation = &"flapping"
-frame_progress = 0.7839939
+frame_progress = 0.27395332
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10.5, -11)
@@ -44,6 +46,7 @@ position = Vector2(-57.5, -5.5)
 shape = SubResource("RectangleShape2D_g0w4w")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_s0tjq")]
+stats = ExtResource("2_cnri3")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

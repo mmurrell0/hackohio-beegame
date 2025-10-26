@@ -1,7 +1,9 @@
 extends Area2D
 
-var speed = 1000
-var damage = 70
+@export var stats: Resource
+
+@onready var speed = stats.speed
+@onready var damage = stats.damage
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("flapping")

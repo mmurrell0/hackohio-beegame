@@ -3,8 +3,10 @@ extends Node
 signal died
 signal damaged
 
-@export var health = 100
-@export var maxHealth = 100
+@export var stats: Resource
+
+@onready var health = stats.health
+@onready var maxHealth = stats.maxHealth
 
 func take_damage(damage):
 	health -= damage

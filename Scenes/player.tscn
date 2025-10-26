@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://1ek4p4ii3rhm"]
+[gd_scene load_steps=13 format=3 uid="uid://1ek4p4ii3rhm"]
 
 [ext_resource type="Script" uid="uid://bhbncv0cdtbe3" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="PackedScene" uid="uid://cgdgnsltbfo7w" path="res://Scenes/bullet.tscn" id="2_6t5aa"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b5huf1nynq5j8" path="res://Art/BeeBroSprites/WingsOpen.png" id="4_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://bvw0cke18mh8h" path="res://Art/BeeBroSprites/BeeBroDamaged.png" id="6_3smsa"]
 [ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="6_x3wgy"]
+[ext_resource type="Resource" uid="uid://co38cs5dihiby" path="res://Resources/hornetstats.tres" id="8_8erm5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{
@@ -68,6 +69,7 @@ wait_time = 0.25
 one_shot = true
 
 [node name="HealthComponent" parent="." groups=["Player"] instance=ExtResource("6_x3wgy")]
+stats = ExtResource("8_8erm5")
 
 [node name="DamagedFrameTimer" type="Timer" parent="."]
 wait_time = 0.2

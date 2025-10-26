@@ -10,5 +10,5 @@ func _on_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("Boundary")):
 		queue_free()
 	if(area.get_parent().is_in_group("Enemy")):
-		area.get_parent().get_node("HealthComponent").take_damage(50)
+		area.get_parent().get_node("HealthComponent").take_damage(damage)
 		queue_free()

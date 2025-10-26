@@ -1,7 +1,9 @@
 extends Area2D
 
-var speed = 800.0
-var damage = 50
+@export var stats: Resource
+
+@onready var speed = stats.speed
+@onready var damage = stats.damage
 
 func _physics_process(delta):
 	position += transform.x * speed * delta

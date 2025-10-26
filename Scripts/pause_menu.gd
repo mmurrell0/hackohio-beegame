@@ -17,4 +17,5 @@ func _on_quit_button_pressed() -> void:
 	get_tree().quit()
 
 func _on_visibility_changed() -> void:
-	$PauseCooldown.start()
+	if visible == true:
+		$PauseCooldown.start()

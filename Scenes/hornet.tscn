@@ -52,6 +52,8 @@ position = Vector2(6, 0)
 shape = SubResource("RectangleShape2D_uhev1")
 
 [node name="HealthComponent" parent="." instance=ExtResource("5_s5g3n")]
+health = 100
+maxHealth = 100
 
 [node name="FirePoint" type="Node2D" parent="."]
 position = Vector2(-8.666667, 12)

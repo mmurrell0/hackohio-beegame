@@ -5,11 +5,12 @@ extends Node2D
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	if Input.is_action_just_pressed("Pause") && $DeathMenu.visible == false:
+		$PauseMenu.visible = true
+		get_tree().paused = true
 
 func _on_game_over() -> void:
-	print_debug("Game Over!")
+	$DeathMenu.visible = true
+	get_tree().paused = true

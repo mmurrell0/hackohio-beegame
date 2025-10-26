@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://rj6afcysnb8r"]
+
+[ext_resource type="Script" uid="uid://2g6drhe7ncat" path="res://death_menu.gd" id="1_8sm51"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ipdme"]
+font_size = 36
+
+[node name="DeathMenu" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_8sm51")
+
+[node name="Background" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="DeathLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -63.5
+offset_right = 63.5
+offset_bottom = 50.0
+grow_horizontal = 2
+text = "You Died!"
+label_settings = SubResource("LabelSettings_ipdme")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuoteLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -277.0
+offset_top = 140.0
+offset_right = 279.0
+offset_bottom = 190.0
+grow_horizontal = 2
+text = "Ow! That stung."
+label_settings = SubResource("LabelSettings_ipdme")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 543.0
+offset_top = 538.0
+offset_right = 608.0
+offset_bottom = 569.0
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 543.0
+offset_top = 584.0
+offset_right = 608.0
+offset_bottom = 615.0
+text = "Quit"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

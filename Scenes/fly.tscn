@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://humh7skip8ir"]
+
+[ext_resource type="Script" uid="uid://bshvxn0jtlgqf" path="res://Scripts/fly.gd" id="1_p3uj0"]
+[ext_resource type="Resource" uid="uid://b6ql6owxp00ev" path="res://Resources/flystats.tres" id="2_fojns"]
+[ext_resource type="Texture2D" uid="uid://brlq4gb1q4434" path="res://Art/Heathens/Fly/FlyStandard1.png" id="3_pmu3r"]
+[ext_resource type="Texture2D" uid="uid://dvv8o7lttpqj" path="res://Art/Heathens/Fly/FlyStandard2.png" id="4_w0sxp"]
+[ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="5_01udg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjwsl"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("3_pmu3r")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_w0sxp")
+}],
+"loop": true,
+"name": &"flapping",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqiq8"]
+size = Vector2(85, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3uj0"]
+size = Vector2(47, 43)
+
+[node name="Fly" type="Area2D" groups=["Enemy"]]
+script = ExtResource("1_p3uj0")
+stats = ExtResource("2_fojns")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fjwsl")
+animation = &"flapping"
+frame_progress = 0.936014
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-14, 15)
+shape = SubResource("RectangleShape2D_rqiq8")
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_01udg")]
+stats = ExtResource("2_fojns")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-25, 15)
+shape = SubResource("RectangleShape2D_p3uj0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]
+[connection signal="died" from="HealthComponent" to="." method="_on_died"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

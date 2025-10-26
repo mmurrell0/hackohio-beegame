@@ -1,0 +1,68 @@
+[gd_scene load_steps=12 format=3 uid="uid://cjvxvgjltqy4o"]
+
+[ext_resource type="Texture2D" uid="uid://ceewrcl4he0j2" path="res://Art/Heathens/Hornet/HornetStandard.png" id="1_i7dss"]
+[ext_resource type="Texture2D" uid="uid://dojcx51cj4lco" path="res://Art/Heathens/Hornet/HornetWingsClosed.png" id="1_m26km"]
+[ext_resource type="Script" uid="uid://geq7qnhkg8u" path="res://Scripts/hornet.gd" id="1_uhev1"]
+[ext_resource type="PackedScene" uid="uid://bmrl7yncu53ha" path="res://Scenes/hornet_bullet.tscn" id="2_41314"]
+[ext_resource type="Texture2D" uid="uid://dstymnrqyr5x3" path="res://Art/Heathens/Hornet/HornetWingsOpen.png" id="2_uhev1"]
+[ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="5_s5g3n"]
+[ext_resource type="Resource" uid="uid://co38cs5dihiby" path="res://Resources/hornetstats.tres" id="7_40bbm"]
+[ext_resource type="Script" uid="uid://ctnca6touhcls" path="res://Scripts/targeting_fire_point.gd" id="7_d5q07"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ee0bo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m26km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uhev1")
+}],
+"loop": true,
+"name": &"flapping",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m26km"]
+size = Vector2(34, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhev1"]
+size = Vector2(22, 34)
+
+[node name="Hornet" type="CharacterBody2D" groups=["Enemy"]]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_uhev1")
+bullet = ExtResource("2_41314")
+
+[node name="Wings" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, -19)
+sprite_frames = SubResource("SpriteFrames_ee0bo")
+animation = &"flapping"
+frame_progress = 0.8179136
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_i7dss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_m26km")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(6, 0)
+shape = SubResource("RectangleShape2D_uhev1")
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_s5g3n")]
+stats = ExtResource("7_40bbm")
+
+[node name="FirePoint" type="Node2D" parent="."]
+position = Vector2(-8.666667, 12)
+script = ExtResource("7_d5q07")
+
+[node name="AttackCooldown" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]
+[connection signal="died" from="HealthComponent" to="." method="_on_died"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvw0cke18mh8h"
-path="res://.godot/imported/BeeBroDamaged.png-19db248e002499f56c5b318f77e6f3a7.ctex"
+uid="uid://bynbldcuuohql"
+path="res://.godot/imported/MosquitoBase.png-4a71ec43ef511138eb3b0ec0f1c7ce92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/BeeBroSprites/BeeBroDamaged.png"
-dest_files=["res://.godot/imported/BeeBroDamaged.png-19db248e002499f56c5b318f77e6f3a7.ctex"]
+source_file="res://Art/Heathens/Mosquito/MosquitoBase.png"
+dest_files=["res://.godot/imported/MosquitoBase.png-4a71ec43ef511138eb3b0ec0f1c7ce92.ctex"]
 
 [params]
 

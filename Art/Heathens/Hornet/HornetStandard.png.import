@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dstymnrqyr5x3"
-path="res://.godot/imported/HornetWingsOpen.png-98f44c7089954096d1a336ab8cca2197.ctex"
+uid="uid://ceewrcl4he0j2"
+path="res://.godot/imported/HornetStandard.png-5cb638c4128200844c5c4145e380b281.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Heathens/HornetWingsOpen.png"
-dest_files=["res://.godot/imported/HornetWingsOpen.png-98f44c7089954096d1a336ab8cca2197.ctex"]
+source_file="res://Art/Heathens/Hornet/HornetStandard.png"
+dest_files=["res://.godot/imported/HornetStandard.png-5cb638c4128200844c5c4145e380b281.ctex"]
 
 [params]
 

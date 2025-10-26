@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://daf14wrufaia1" path="res://Scripts/mosquito.gd" id="1_g0w4w"]
 [ext_resource type="Texture2D" uid="uid://bynbldcuuohql" path="res://Art/Heathens/Mosquito/MosquitoBase.png" id="1_vq3yg"]
-[ext_resource type="Resource" uid="uid://dkonyo13qkh4k" path="res://Resources/mosquito.tres" id="2_cnri3"]
+[ext_resource type="Resource" uid="uid://dkonyo13qkh4k" path="res://Resources/mosquitostats.tres" id="2_cnri3"]
 [ext_resource type="Texture2D" uid="uid://xbdhwdchktff" path="res://Art/Heathens/Mosquito/MosquitoBase2.png" id="2_g0w4w"]
 [ext_resource type="PackedScene" uid="uid://dvn8qgy6n5tiy" path="res://Scenes/health_component.tscn" id="4_s0tjq"]
 

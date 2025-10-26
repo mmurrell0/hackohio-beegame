@@ -35,10 +35,12 @@ func get_movement_input():
 func _on_damaged() -> void:
 	# Damaged
 	$Body.frame = 1
+	modulate.a = 0.5
 	$DamagedFrameTimer.start()
 	await $DamagedFrameTimer.timeout
 	# Normal
 	$Body.frame = 0
+	modulate.a = 1
 
 func _on_died() -> void:
 	game_over.emit()

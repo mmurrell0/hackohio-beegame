@@ -22,4 +22,7 @@ func _on_died() -> void:
 	queue_free()
 
 func _on_damaged() -> void:
-	pass # Replace with function body.
+	modulate.a = 0.5
+	$FlashDuration.start()
+	await $FlashDuration.timeout
+	modulate.a = 1

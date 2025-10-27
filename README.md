@@ -1,1 +1,1 @@
-Contributors: Macaden Murrell, Gavin Boecker, Tyler Laurence
+Contributors: Macaden Murrell and Gavin Boecker

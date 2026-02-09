@@ -8,6 +8,7 @@ func _ready() -> void:
 # MAYBE ADD FUNCTION FOR POWER UP DROPS
 # Projectile shoots straight at player then stays on that course'
 
+
 func _process(delta: float) -> void:
 	shoot()
 

@@ -3,13 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://1ek4p4ii3rhm" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://cn058aabff1ap" path="res://Scripts/game.gd" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://cjvxvgjltqy4o" path="res://Scenes/hornet.tscn" id="2_qxrlw"]
-[ext_resource type="Texture2D" uid="uid://brms7fhutvfru" path="res://Art/Background/GAVININEEDYOUjpg.jpg" id="2_v158k"]
+[ext_resource type="Texture2D" uid="uid://brms7fhutvfru" path="res://Art/Backgrounds/GAVININEEDYOUjpg.jpg" id="2_v158k"]
 [ext_resource type="PackedScene" uid="uid://d2ic47piemd8r" path="res://Scenes/mosquito.tscn" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://humh7skip8ir" path="res://Scenes/fly.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://dttg2yla8guux" path="res://Scenes/pause_menu.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://rj6afcysnb8r" path="res://Scenes/death_menu.tscn" id="7_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://bwai800yq164c" path="res://Scenes/wasp.tscn" id="9_h4fw4"]
 [ext_resource type="AudioStream" uid="uid://bsu8ps34glc51" path="res://Art/SoundEffects/Death.mp3" id="10_ldgsr"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebmjs"]
 

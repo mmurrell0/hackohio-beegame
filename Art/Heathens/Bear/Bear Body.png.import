@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brms7fhutvfru"
-path="res://.godot/imported/GAVININEEDYOUjpg.jpg-0e74fe57495151a11a407cfeed75b910.ctex"
+uid="uid://pwaqx3tqc1nc"
+path="res://.godot/imported/Bear Body.png-7f6bf90ce23892e95db0b188c35221b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Background/GAVININEEDYOUjpg.jpg"
-dest_files=["res://.godot/imported/GAVININEEDYOUjpg.jpg-0e74fe57495151a11a407cfeed75b910.ctex"]
+source_file="res://Art/Heathens/Bear/Bear Body.png"
+dest_files=["res://.godot/imported/Bear Body.png-7f6bf90ce23892e95db0b188c35221b2.ctex"]
 
 [params]
 

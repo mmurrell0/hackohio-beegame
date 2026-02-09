@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdqkfgqem8pyw"
-path="res://.godot/imported/Plains.png-0ff291933e4de2618b62f10f46f66152.ctex"
+uid="uid://brms7fhutvfru"
+path="res://.godot/imported/GAVININEEDYOUjpg.jpg-4554dfd26c2f3e3f01d87842deb15e54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Background/Plains.png"
-dest_files=["res://.godot/imported/Plains.png-0ff291933e4de2618b62f10f46f66152.ctex"]
+source_file="res://Art/Backgrounds/GAVININEEDYOUjpg.jpg"
+dest_files=["res://.godot/imported/GAVININEEDYOUjpg.jpg-4554dfd26c2f3e3f01d87842deb15e54.ctex"]
 
 [params]
 

@@ -87,6 +87,7 @@ shape = SubResource("RectangleShape2D_3smsa")
 stream = ExtResource("9_f1ek2")
 
 [node name="BeeBroHurt" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("10_tx1dd")
 
 [connection signal="damaged" from="HealthComponent" to="." method="_on_damaged"]

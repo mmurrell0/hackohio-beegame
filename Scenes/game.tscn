@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bwai800yq164c" path="res://Scenes/wasp.tscn" id="9_h4fw4"]
 [ext_resource type="AudioStream" uid="uid://bsu8ps34glc51" path="res://Art/SoundEffects/Death.mp3" id="10_ldgsr"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebmjs"]
 
 [node name="Game" type="Node2D"]

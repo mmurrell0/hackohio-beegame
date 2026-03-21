@@ -10,6 +10,7 @@ signal damaged
 
 func take_damage(damage):
 	health -= damage
+	#TODO Remove later
 	print_debug("Took damage: " + str(damage))
 	damaged.emit()
 	if health <= 0:
